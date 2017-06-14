@@ -1,0 +1,26 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: danil
+  Date: 14.06.2017
+  Time: 21:19
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page pageEncoding="UTF-8" language="java" %>
+<footer class="container-fluid">
+    <div class="row content">
+        <div class="col-md-8 col-md-offset-2 bottom-line">
+            <div class="col-md-6">
+                <span>Created by Danil Cheliadin</span> <br>
+            </div>
+            <div class="col-md-6 left-mar left-mar">
+                <span class="">Labs for Java</span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2"><div class="midle under-line">2017 год</div></div>
+    </div>
+</footer>
+
+<script src="external/jquery/jquery-3.2.1.min.js"></script>
+<script src="external/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.reg_form input[type="text"],input[type="password"], input[type="email"]  {
+    margin-bottom: 10px;
+}
+.reg_form input[type="text"],input[type="password"], input[type="email"], button  {
+    width: 300px !important;
+}
+main {
+    padding-top: 10px;
+}
+.reg_form {
+    width: 300px;
+}
+.main {
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.main {
+    background: #0091ea;
+    width: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 30px;
+}

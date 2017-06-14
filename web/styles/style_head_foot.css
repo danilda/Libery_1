@@ -1,0 +1,64 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(249, 249, 249);
+
+}
+.head-img {
+    background-image: url(../imgs/book.jpg);
+    padding-top: 180px;
+}
+.back-zero {
+    background-color: rgba(249,249,249,0.0);
+}
+.white-color-text {
+    color: #ffffff;
+}
+.navbar {
+    border: 0;
+}
+.white-color-text-important {
+    color: #ffffff !important;
+}
+.white-color-text-important > li > a{
+    color: #ffffff !important;
+}
+.white-color-text-important > li > a:hover{
+    background-color: rgba(249,249,249,0.1)!important;
+}
+.active a{
+    color: #ffffff !important;
+    background-color: rgba(249,249,249,0.2)!important;
+    border: 0!important;
+}
+.open a{
+    background-color: rgba(249,249,249,0.2)!important;
+    border: 0!important;
+}
+.midle {
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    background-color: #1f2024;
+    height: 150px;
+    width: 100%;
+}
+.content {
+    margin-top: 50px;
+    height: 60px;
+}
+.bottom-line {
+    border-bottom: 2px solid #3c3c42;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+.under-line {
+    margin-top: 10px;
+    width: 60px;
+    color: #ffffff;
+}
+
+.left-mar {
+    text-align: left;
+}

@@ -1,0 +1,32 @@
+
+<%@ page import="db.dbExeptions.DataNotFoundException" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.LinkedList" %>
+<%@ page import="beans.GenreList" %>
+<%@ page import="beans.Genre" %><%--
+  Created by IntelliJ IDEA.
+  User: danil
+  Date: 14.06.2017
+  Time: 21:20
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page pageEncoding="UTF-8" language="java" %>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
+<div class="col-md-3 col-md-offset-1 col-lg-2 col-lg-offset-1 coloms left_colom">
+    <strong><h3>Все авторы:</h3></strong>
+    <ul>
+        <%!
+            GenreList genreList = new GenreList();
+            List<Genre> genres = null;
+        %>
+        <%
+            try {
+                genres = genreList.getAllGenres();
+            } catch (DataNotFoundException e){ %>
+        <%=e.getMessage() %>
+        <%  } %>
+            <%for(Genre genre : genres){%>
+        <li><a href="#"><h4><%=genre.getName()%></h4></a></li>
+        <%}%>
+    </ul>
+</div>

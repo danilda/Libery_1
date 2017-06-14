@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 9, 2017, 6:25:56 PM
+    Author     : dach1016
+*/
+
+.reg_form input[type="text"],input[type="password"], input[type="email"]  {
+     margin-bottom: 10px;
+ }
+.reg_form input[type="text"],input[type="password"], input[type="email"], button  {
+    width: 300px !important;
+}
+.main {
+    background: #0091ea;
+    width: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+.reg_form input[type="text"],input[type="password"], input[type="email"]  {
+    margin-bottom: 10px;
+}
+.reg_form input[type="text"],input[type="password"], input[type="email"], button  {
+    width: 300px !important;
+}
+
+.reg_form {
+    width: 300px;
+}
+.main {
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
