@@ -3,6 +3,7 @@ package db;
 import beans.*;
 import db.dbExeptions.DataNotFoundException;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -28,4 +29,6 @@ public interface DAOLibery {
     List<Genre> getAllGenres() throws DataNotFoundException;
 
     List<Publisher> getAllPublishers() throws DataNotFoundException;
+
+    ResultSet getBooksByGenre(String genreID) throws DataNotFoundException;
 }

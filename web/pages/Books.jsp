@@ -1,4 +1,5 @@
-
+<%@ page import="beans.Book" %>
+<%@ page import="beans.BookList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" type="text/css" href="styles/style_main.css">
 <main class="container-fluid">
@@ -23,7 +24,24 @@
     <div class="row">
         <%@include file="/WEB-INF/jspf/LeftColomn.jspf"%>
         <div class="col-md-7 col-lg-7 coloms">
-            <%%>
+            <%
+                try {
+                    String genreId = request.getParameter("genreId");
+                    if( genreId != null) {
+                        List<Book> books = null;
+
+                            books = (new BookList()).getAllBooks();
+
+                        for(Book book : books){
+                            if(book.getGenreId() == Integer.valueOf(genreId)){
+
+                            }
+                        }
+                    }
+                } catch (DataNotFoundException e) {
+                    e.printStackTrace();
+                }
+            %>
         </div>
     </div>
 </main>

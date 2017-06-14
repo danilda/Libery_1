@@ -24,6 +24,10 @@ public class OracleDAO implements DAOLibery{
     private static final String SELECT_ALL_BOOKS = "SELECT * FROM BOOK";
     private static final String SELECT_ALL_AUTHORS = "SELECT * FROM author";
     private static final String SELECT_ALL_PUBLISHERS = "SELECT * FROM publisher";
+    private static final String SELECT_BOOK_BY_GENRE =
+            "SELECT * FROM book, author, publisher, GENRE" +
+            "WHERE book.genre_id = ? AND book.genre_id = genre.id " +
+                    "AND book.author_id = author.id AND publisher.id = book.publisher_id";
     private static final String INSERT_INTO_BOOK = "INSERT INTO " +
             "book( name, content, page_count, isbn, genre_id, author_id, publish_year, publisher_id, image)" +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -254,6 +258,26 @@ public class OracleDAO implements DAOLibery{
                 publishers.add(publisher);
             }
         return publishers;
+    }
+
+    @Override
+    public ResultSet getBooksByGenre(String genreID) throws DataNotFoundException{
+        try {
+            connect();
+            return unhandledGetBooksByGenre(genreID);;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private ResultSet unhandledGetBooksByGenre(String genreID) throws SQLException {
+        List<Book> books = new LinkedList<>();
+        ps = connection.prepareStatement(SELECT_BOOK_BY_GENRE);
+        int id = Integer.valueOf(genreID);
+        ps.setInt(1,id);
+        rs = ps.executeQuery();
+        return rs;
     }
 
 }

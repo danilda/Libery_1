@@ -15,4 +15,7 @@ public class BookList {
         DAOLibery dao = new OracleDAO();
         return dao.getAllBooks();
     }
+
+    public List<Book> getBooksByGenre() throws DataNotFoundException {}
+
 }
